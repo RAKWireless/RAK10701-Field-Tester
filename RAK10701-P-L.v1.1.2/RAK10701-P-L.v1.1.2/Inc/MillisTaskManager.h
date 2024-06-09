@@ -20,7 +20,7 @@
   * You need to provide a system clock accurate to the millisecond level, and then call the Running function periodically
   **************************************************** ****************************
   */
- 
+
 #ifndef __MILLISTASKMANAGER_H
 #define __MILLISTASKMANAGER_H
 
@@ -31,41 +31,41 @@
 class MillisTaskManager
 {
 public:
-    typedef void(*TaskFunction_t)(void); // Task callback function.
-    struct Task
-    {
-        bool State;                // Task state.
-				bool FirstExecut;          // Whether the first execution flag.
-        TaskFunction_t Function;   // Task function pointer.
-        uint32_t Time;             // Task execution cycle time.
-        uint32_t TimePrev;         // The last trigger time of the task.
-        uint32_t TimeCost;         // Task cost (us) time.
-        uint32_t TimeError;        // Error time.
-        struct Task* Next;         // next node.
-    };
-    typedef struct Task Task_t;
+	typedef void (*TaskFunction_t)(void); // Task callback function.
+	struct Task
+	{
+		bool State;				 // Task state.
+		bool FirstExecut;		 // Whether the first execution flag.
+		TaskFunction_t Function; // Task function pointer.
+		uint32_t Time;			 // Task execution cycle time.
+		uint32_t TimePrev;		 // The last trigger time of the task.
+		uint32_t TimeCost;		 // Task cost (us) time.
+		uint32_t TimeError;		 // Error time.
+		struct Task *Next;		 // next node.
+	};
+	typedef struct Task Task_t;
 
-    MillisTaskManager(bool priorityEnable = false);
-    ~MillisTaskManager();
+	MillisTaskManager(bool priorityEnable = false);
+	~MillisTaskManager();
 
-    Task_t* Register(TaskFunction_t func, uint32_t timeMs, bool state = true);
-    Task_t* Find(TaskFunction_t func);
-    Task_t* GetPrev(Task_t* task);
-    bool Logout(TaskFunction_t func);
-    bool SetState(TaskFunction_t func, bool state);
-    bool SetIntervalTime(TaskFunction_t func, uint32_t timeMs);
-		bool ReSetTaskTime(TaskFunction_t func, uint32_t timeMs);
-    uint32_t GetTimeCost(TaskFunction_t func);
-    uint32_t GetTickElaps(uint32_t nowTick, uint32_t prevTick);
+	Task_t *Register(TaskFunction_t func, uint32_t timeMs, bool state = true);
+	Task_t *Find(TaskFunction_t func);
+	Task_t *GetPrev(Task_t *task);
+	bool Logout(TaskFunction_t func);
+	bool SetState(TaskFunction_t func, bool state);
+	bool SetIntervalTime(TaskFunction_t func, uint32_t timeMs);
+	bool ReSetTaskTime(TaskFunction_t func, uint32_t timeMs);
+	uint32_t GetTimeCost(TaskFunction_t func);
+	uint32_t GetTickElaps(uint32_t nowTick, uint32_t prevTick);
 #if (MTM_USE_CPU_USAGE == 1)
-    float GetCPU_Usage();
+	float GetCPU_Usage();
 #endif
-    void Running(uint32_t tick);
+	void Running(uint32_t tick);
 
 private:
-    Task_t* Head;        // Task list header.
-    Task_t* Tail;        // Tail of the task list.
-    bool PriorityEnable; // Priority enable.
+	Task_t *Head;		 // Task list header.
+	Task_t *Tail;		 // Tail of the task list.
+	bool PriorityEnable; // Priority enable.
 };
 
 #endif

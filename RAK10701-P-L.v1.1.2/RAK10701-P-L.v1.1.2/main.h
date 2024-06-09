@@ -26,14 +26,14 @@
 #include "nrf_sdh.h"
 #include "atcmd.h"
 
-//#include "nrf_gpio.h"
+// #include "nrf_gpio.h"
 
-#define printTitle()                                          \
-{                                                             \
-  Serial.println();                                           \
-  Serial.println("=====================================");    \
-  Serial.printf("%s  %s\r\n",__DATE__,__TIME__);              \
-  Serial.println("=====================================");    \
-}
+#define printTitle()                                             \
+	{                                                            \
+		Serial.println();                                        \
+		Serial.println("====================================="); \
+		Serial.printf("%s  %s\r\n", __DATE__, __TIME__);         \
+		Serial.println("====================================="); \
+	}
 
 #endif

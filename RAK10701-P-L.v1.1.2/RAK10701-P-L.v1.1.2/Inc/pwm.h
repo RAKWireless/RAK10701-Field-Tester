@@ -3,9 +3,9 @@
 
 #include <Arduino.h>
 
-#define BL_PIN   WB_IO3
+#define BL_PIN WB_IO3
 
-#define PWM_FOSC  16000000    // The clock frequency of PWM is 16MHz.
+#define PWM_FOSC 16000000 // The clock frequency of PWM is 16MHz.
 
 void pwmInit();
 void pwmBacklightFades(uint8_t duty, uint8_t backLight);

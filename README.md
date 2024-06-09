@@ -19,11 +19,12 @@ With a LoRaWAN Field Tester , it is now easy to investigate whether the required
 
 ## _Important_
 
-:exclamation: _**This source code is based on RAKwireless RUI3 V4.1.1. Please check the RUI3 documentation how to install the RUI3 BSP's**_    
-If you need to compile the source code with an older RUI3 version, the branch [RAK10701-P-L.v1.0.6](https://github.com/RAKWireless/RAK10701-Field-Tester/tree/RAK10701-P-L.v1.0.6) is compatible with RUI3 versions 4.1.0 and older.    
-:exclamation:
+### :exclamation: _**This source code is based on RAKwireless RUI3 V4.1.1. Please check the RUI3 documentation how to install the RUI3 BSP's**_    
+### If you need to compile the source code with an older RUI3 version, the branch [RAK10701-P-L.v1.0.6](https://github.com/RAKWireless/RAK10701-Field-Tester/tree/RAK10701-P-L.v1.0.6) is compatible with RUI3 versions 4.1.0 and older. :exclamation:
 
-# :collision: _**Some libraries used in this application are changed to work with RUI3. To make compilation easier, the required libraries are included in the source code in the folder `Src/libraries`. This way it is not required to install the libraries manually.**_ :collision:
+### :collision: _**Some libraries used in this application are changed to work with RUI3. To make compilation easier, the required libraries are included in the source code in the folder `Src/libraries`. This way it is not required to install the libraries manually.**_ :collision:
+
+:exclamation: If using VSC & ArduinoCLI, the arduino.json file and a past-compilation Python script will copy the resulted files into the _**Firmware**_ folder.
 
 ----
 
@@ -41,3 +42,10 @@ You can find more information in the [README file for the sources](./RAK10701-P-
 
 Documentation for the usage and replacing the end-point required can be found in the [RAKwireless Documentation Center](https://docs.rakwireless.com/Product-Categories/WisNode/RAK10701-P/Overview)
 
+## Button function 
+
+| Button usage | Function                                                       |
+| ------------ | -------------------------------------------------------------- |
+| Long Press   | Shutdown the device for power saving                           |
+| Double Click | Force uplinks                                                  |
+| Single Click | Switch screen on <br> Lock/unlock touch screen if screen is on |

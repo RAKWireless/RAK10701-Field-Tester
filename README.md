@@ -38,7 +38,7 @@ This folder has the source files
 
 # Documentation
 
-You can find more information in the [README file for the sources](./RAK10701-P-L.v1.1.2/README.md) 
+You can find more information in the [README file for the sources](./RAK10701-P-L.v1.1.2//RAK10701-P-L.v1.1.2/README.md) 
 
 Documentation for the usage and replacing the end-point required can be found in the [RAKwireless Documentation Center](https://docs.rakwireless.com/Product-Categories/WisNode/RAK10701-P/Overview)
 

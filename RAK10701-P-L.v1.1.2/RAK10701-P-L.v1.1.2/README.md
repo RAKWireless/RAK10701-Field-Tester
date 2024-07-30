@@ -4,7 +4,7 @@
 
 1. Open your Arduino IDE, click on **File** > **Preferences**, and copy below url to **Additional Boards Manager URLs**:
 
-   https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless.com_rui_index.json
+   https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_com_rui_index.json
 
 2. Click on **Tools** > **Board** > **Board Manager** and Search **RAKwireless RUI nRF Boards** in the Boards Manager.
 
